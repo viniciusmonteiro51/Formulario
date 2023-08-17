@@ -1,14 +1,13 @@
-import Input from "@/components/Input";
-import Label from "@/components/Label";
-
+import Formulario from "@/components/Formulario"
+import Cabecario from "@/components/Cabecario"
 
 export default function Home(){
 
   return(
     <>
     <form>
-    <Label/>
-    <Input/>
+    <Cabecario/>
+    <Formulario/>
     </form> 
     </>
   )

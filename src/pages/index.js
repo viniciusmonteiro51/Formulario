@@ -4,12 +4,11 @@ import Cabecario from "@/components/Cabecario"
 export default function Home(){
 
   return(
+  
     <>
-    <form>
-    <Cabecario/>
     <Formulario/>
-    </form> 
     </>
+  
   )
 }
 

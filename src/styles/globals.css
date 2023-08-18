@@ -1,6 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
+  font-family: 'Quicksand';
   box-sizing: border-box;
   padding: 0;
   margin: 0;

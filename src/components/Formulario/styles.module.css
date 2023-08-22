@@ -1,6 +1,42 @@
 .fieldset{
-    margin: 1px;
-    padding: 1px;
+    margin: auto;
+    padding: auto;
     width: 360px;
+    height:auto;
 
+}
+
+.card{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.radioContainer {
+    display: inline-block;
+
+  }
+  
+  
+  .radioContainer input[type="radio"] + label {
+    margin-right: 50px;
+    padding: 7px;
+  }
+
+.card1{
+    padding: 10px;
+}
+
+.botao{
+    color: white;
+    background-color: #274156;
+    Width:319px;
+    Height:44px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.botao:hover{
+    color: #34638a;
 }

@@ -1,6 +1,6 @@
 import Formulario from "@/components/Formulario"
 import Cabecario from "@/components/Cabecario"
-
+import Input from "@/components/Input"
 export default function Home(){
 
   return(

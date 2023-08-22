@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import Cabecario from '../Cabecario';
-
+import Input from '../Input';
 import React, { useState } from 'react';
 
 export default function Formulario() {
@@ -20,36 +20,41 @@ export default function Formulario() {
         <header>
             <Cabecario/>
         </header>
-        <form className={styles.formulario} onSubmit={enviar}>
-          <div>
+        <form onSubmit={enviar}>
+
+          <div className={styles.card}>
             <label htmlFor="nome">Nome:</label>
-            <input
+            <Input
               type="text"
               id="nome"
-              value={nome}
+              
               onChange={(e) => setNome(e.target.value)}
               placeholder="Ex: Maria de Oliveira"
             />
           </div>
 
-          <div>
+          <div className={styles.card}>
             <label htmlFor="email">E-mail:</label>
-            <input
+            <Input
               type="text"
               id="email"
-              value={email}
+              
               onChange={(e) => setEmail(e.target.value)}
               placeholder="maria.oliveira@gmail.com"
             />
           </div>
 
-          <div>
-            <label htmlFor="sexo">Sexo:</label>
-            <input type="radio" name="sexo" value="masculino" /> Masculino<br />
-            <input type="radio" name="sexo" value="feminino" /> Feminino<br />
+          <div className={styles.card}>
+            <label htmlFor="sexo">Sexo: </label><br/>
+              <div className={styles.radioContainer}>
+                <input type="radio" name="sexo" value="masculino" id="masculino" />
+                <label htmlFor="masculino">Masculino</label>
+                <input type="radio" name="sexo" value="feminino" id="feminino" />
+                <label htmlFor="feminino">Feminino</label>
+              </div>
           </div>
 
-          <div>
+          <div className={styles.card}> 
             <label htmlFor="curso">Curso: </label>
             <select name="curso" id="curso">
               <option value="HTML">HTML</option>
@@ -59,16 +64,17 @@ export default function Formulario() {
             </select>
           </div>
 
-          <div>
+          <div className={styles.card}>
             <label htmlFor="msg">Descreva o atendimento especial:</label>
-            <textarea id="msg" name="msg"></textarea>
+            <textarea id="msg" name="msg" rows="5"></textarea>
           </div>
 
-          <div>
-            <input type="radio" name="termo" value="feminino" /> Estou de acordo com os termos de serviço<br />
-
-            <button type="submit">Realizar Inscrição</button>
+          <div className={styles.card1}>
+            <input type="checkbox" name="termo" value="feminino" /> Estou de acordo com os termos de serviço<br/>
           </div>
+
+            <button className={styles.botao} type="submit">Realizar Inscrição</button>
+          
         </form>
       </fieldset>
     </>
